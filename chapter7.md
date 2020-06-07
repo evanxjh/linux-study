@@ -107,7 +107,7 @@
 
 #####  4.修改文件时间或创建新文件:yum:
 
-- modification time：mtime，文件的“内容”更改时，才会更新这个时间。（**ls的模式时间**）
+- modification time：mtime，文件的“内容”更改时，才会更新这个时间。（**ls的默认时间**）
 - status time：ctime，文件的“状态”更改时，才会更新这个时间。
 - access time：atime，文件的内容被“取用”时，才会更行这个时间。 
 
