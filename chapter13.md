@@ -82,10 +82,52 @@ exit 0
 
 ##### if...then
 
+```shell
+if [ 条件判断式 ]; then
+	...				#if中的内容
+fi					#用fi来表示结束if
+```
+
+​    **多重判断**
+
+```shell
+if [ 条件判断式1 ]; then
+	...
+elif [ 条件判断式2 ]; then
+	...
+else
+	...
+fi
+```
+
+
+
 ##### case...esac
+
+```shell
+case $变量名称 in
+	"第一个变量内容")	   #每个变量用双引号括起来，)为关键字
+	;;				    #每个类型结尾用两个连续分号处理
+	"第二个变量内容")
+	;;
+	*)					#用*代笔default
+	exit 1
+	;;
+esac					#用esac代表case的结束
+	
+```
+
+
 
 ##### 函数function功能
 
+```shell
+function fname() {
+	#程序段
+}
+```
+
+- function也是拥有内置变量的。函数名称代表$0，后续变量为$1,$2...。
 
 
 #### 循环
@@ -94,5 +136,37 @@ exit 0
 
 ##### 不定循环 while do done
 
+```shell
+while [ condition ] 
+do
+	...
+done
+```
+
+##### 不定循环 until do done
+
+```shell
+until [ condition ]
+do
+	...
+done
+```
+
+- 两者的区别在于，while先判断后执行，until先执行后判断。
+
 ##### 固定循环 for...do...done
+
+```shell
+for var in con1 con2 con3 ...		#第一次$var为con1，第二次为con2，以此类推
+do
+	...
+done
+```
+
+```shell
+for (( i=1; i<=$num; i=i+1))
+do
+	...
+done
+```
 
